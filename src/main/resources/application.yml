@@ -1,0 +1,38 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    show-sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+  cloud:
+    gcp:
+      storage:
+        credentials:
+          location:
+            classpath: regal-river-351911-7361d2f9aea0.json
+
+  datesource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://34.64.53.227:3306/mamomo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root
+    password: mamomo!mysql
+
+elasticsearch:
+  host: 34.64.53.227
+  port: 9200
+  username: elastic
+  password: hansung
+  connectTimeout: 6000
+
+jwt:
+  secret: 678c95112e35ae4231e3c97dd6ec9388ea8c94fc84f7fe3913f7200d3c76c0c58df814a330368440cc49c28bd5a8276ecb4c5e8bf6d4ae263d85e3d46dbc80a4
+  token-validity-in-seconds: 86400
+
+logging:
+  level:
+    root: info
